@@ -4,3 +4,6 @@ Feature: Add a product to the shopping cart wong
     Given Candidate select the <article>
     When Add to shopping cart the <product>
     Then Check if the product was added to the cart <product>
+    Examples:
+      | article | product |
+

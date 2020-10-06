@@ -13,17 +13,18 @@ import com.sophossolutions.tasks.BuyProduct;
 import com.sophossolutions.tasks.PostMethod;
 import com.sophossolutions.utilities.MsgError;
 
-import io.cucumber.java.Before;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
+
+import cucumber.api.java.Before;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.rest.abilities.CallAnApi;
 
 public class steps {
 
-	@Before
+/*	@Before
 	public void prepareStage() {
 		OnStage.setTheStage(new OnlineCast());
 	}
@@ -32,6 +33,7 @@ public class steps {
 	public void createAUserWithThePostMethod() {
 		theActorCalled("").whoCan(CallAnApi.at(""));
 	}
+
 
 	@When("Candidate provide information the post method with {string}")
 	public void provideInformationThePostMethod(String post, Map<String, String> dataTable) {
@@ -44,7 +46,7 @@ public class steps {
 						.should(seeThatResponse(response -> response.body("result.first_name", equalTo("Candidate")))
 								.orComplainWith(ExceptionError.class, MsgError.MSG_VALUE_ERROR.getMsg()));
 			}
-			
+
 			@Given("{word} select the {string}")
 			public void selectThe(String actorName, String article) {
 				theActorCalled(actorName).attemptsTo(BuyProduct.buy());
@@ -60,5 +62,5 @@ public class steps {
 		theActorInTheSpotlight().should(seeThat(BuyProduct.name(), equalTo(string))
 				.orComplainWith(ExceptionError.class, MsgError.MSG_VALUE_ERROR.getMsg()));
 	}
-
+*/
 }
